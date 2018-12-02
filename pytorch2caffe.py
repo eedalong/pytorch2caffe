@@ -34,6 +34,9 @@ layer_id = 0
 
 def pytorch2caffe(input_var, output_var, protofile, caffemodel):
     global layer_id
+    ########################################
+    #By Dalong : first generate the prototxt
+    #########################################
     net_info = pytorch2prototxt(input_var, output_var)
     print_prototxt(net_info)
     save_prototxt(net_info, protofile)
