@@ -27,7 +27,8 @@ layer_dict = {'ConvNdBackward': 'Convolution',
               'LeakyReLUBackward': 'ReLU',
               'NegateBackward': 'Power',
               'MulBackward': 'Eltwise',
-              'SpatialCrossMapLRNFunc': 'LRN'}
+              'SpatialCrossMapLRNFunc': 'LRN'\
+              }
 
 layer_id = 0
 
@@ -48,7 +49,9 @@ def pytorch2caffe(input_var, output_var, protofile, caffemodel):
 
     layer_id = 1
     seen = set()
-
+    #############################################
+    # By Dalong: second set value for each layer
+    ############################################
     def convert_layer(func):
         if True:
             global layer_id
